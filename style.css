@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(233, 242, 247);
+}
+
+.input-group-prepend {
+    align-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 1.5rem;
+}
