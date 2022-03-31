@@ -1636,7 +1636,7 @@ var novoArray = [
     "saber",
     "elfos",
     "visar"
-  ]
+]
 
 var letra = '';
 
@@ -1757,15 +1757,16 @@ function excluirPalavraPelaPrimeiraLetra() {
     var auxArray = [];
     var letrasRecebida = document.getElementById("text-6").value
     console.log(letrasRecebida)
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        for(var j = 0; j < letrasRecebida.length; j = j + 1){
-            var primeiraLetra = letrasRecebida.charAt(j)
-            if(novoArray[i].charAt() !== primeiraLetra){
-                auxArray.push(novoArray[i]);
+    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+        for (var j = 0; j < novoArray.length; j = j + 1) {
+            var primeiraLetra = letrasRecebida.charAt(i)
+            if (novoArray[j].charAt() !== primeiraLetra) {
+                auxArray.push(novoArray[j]);
             }
         }
+        novoArray = auxArray;
+        auxArray = [];
     }
-    novoArray = auxArray;
     console.log(novoArray);
 }
 
@@ -1773,59 +1774,85 @@ function excluirPalavraPelaSegundaLetra() {
     var auxArray = [];
     var letrasRecebida = document.getElementById("text-7").value
     console.log(letrasRecebida)
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        for(var j = 0; j < letrasRecebida.length; j = j + 1){
-            var segundaLetra = letrasRecebida.charAt(j)
-            if(novoArray[i].charAt(1) !== segundaLetra){
-                auxArray.push(novoArray[i]);
+    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+        for (var j = 0; j < novoArray.length; j = j + 1) {
+            var segundaLetra = letrasRecebida.charAt(i)
+            if (novoArray[j].charAt(1) !== segundaLetra) {
+                auxArray.push(novoArray[j]);
             }
         }
+        novoArray = auxArray;
+        auxArray = [];
     }
-    novoArray = auxArray;
     console.log(novoArray);
 }
+
 function excluirPalavraPelaTerceiraLetra() {
     var auxArray = [];
     var letrasRecebida = document.getElementById("text-8").value
     console.log(letrasRecebida)
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        for(var j = 0; j < letrasRecebida.length; j = j + 1){
-            var terceiraLetra = letrasRecebida.charAt(j)
-            if(novoArray[i].charAt(2) !== terceiraLetra){
-                auxArray.push(novoArray[i]);
+    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+        for (var j = 0; j < novoArray.length; j = j + 1) {
+            var terceiraLetra = letrasRecebida.charAt(i)
+            if (novoArray[j].charAt(2) !== terceiraLetra) {
+                auxArray.push(novoArray[j]);
             }
         }
+        novoArray = auxArray;
+        auxArray = [];
     }
-    novoArray = auxArray;
     console.log(novoArray);
 }
+
 function excluirPalavraPelaQuartaLetra() {
     var auxArray = [];
-    var letrasRecebida = document.getElementById("text-9").value
+    var letrasRecebida = document.getElementById("text-9").value // ab
     console.log(letrasRecebida)
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        for(var j = 0; j < letrasRecebida.length; j = j + 1){
-            var quartaLetra = letrasRecebida.charAt(j)
-            if(novoArray[i].charAt(3) !== quartaLetra){
-                auxArray.push(novoArray[i]);
+    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+        for (var j = 0; j < novoArray.length; j = j + 1) {
+            var quartaLetra = letrasRecebida.charAt(i)
+            if (novoArray[j].charAt(3) !== quartaLetra) {
+                auxArray.push(novoArray[j]);
             }
         }
+        novoArray = auxArray;
+        auxArray = [];
     }
-    novoArray = auxArray;
     console.log(novoArray);
 }
+
 function excluirPalavraPelaQuintaLetra() {
     var auxArray = [];
     var letrasRecebida = document.getElementById("text-10").value
     console.log(letrasRecebida)
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        for(var j = 0; j < letrasRecebida.length; j = j + 1){
-            var quintaLetra = letrasRecebida.charAt(j)
-            if(novoArray[i].charAt(4) !== quintaLetra){
-                auxArray.push(novoArray[i]);
+    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+        for (var j = 0; j < novoArray.length; j = j + 1) {
+            var quintaLetra = letrasRecebida.charAt(i)
+            if (novoArray[j].charAt(4) !== quintaLetra) {
+                auxArray.push(novoArray[j]);
             }
         }
+        novoArray = auxArray;
+        auxArray = [];
     }
-    novoArray = auxArray;
     console.log(novoArray);
 }
+
+
+
+//function excluirPalavraPelaQuintaLetra(p) {
+//    var auxArray = [];
+//    var letrasRecebida = document.getElementById("text-"+p).value
+//    console.log(letrasRecebida)
+//    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
+//        for(var j = 0; j < novoArray.length; j = j + 1){
+//            var quintaLetra = letrasRecebida.charAt(i)
+//            if(novoArray[j].charAt(4) !== quintaLetra){
+//                auxArray.push(novoArray[j]);
+//            }
+//        }
+//        novoArray = auxArray;
+//        auxArray = [];
+//    }
+//    console.log(novoArray);
+//}
