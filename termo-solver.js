@@ -1676,23 +1676,12 @@ function excluirLetra(palavra) {
     }
 }
 
-
-function priorizarPrimeiraLetra() {
-    letra = document.getElementById("text-1l").value
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        if (novoArray[i].charAt(0) == "letra") {
-            novoArray = novoArray.filter(filtrarLetra)  // como filtrar?
-        }
-    }
-    console.log(novoArray);
-}
-
-
-function priorizarPrimeiraLetra() {
+function priorizarLetra(p) {
     var auxArray = [];
-    var letraRecebida = document.getElementById("text-1l").value;
+    var letraRecebida = document.getElementById("priorizar-letra-" + p).value;
+    console.log(letraRecebida)
     for (var i = 0; i < novoArray.length; i = i + 1) {
-        var primeiraLetra = novoArray[i].charAt();
+        var primeiraLetra = novoArray[i].charAt(p-1);
         if (letraRecebida === primeiraLetra) {
             auxArray.push(novoArray[i]);
         }
@@ -1701,66 +1690,14 @@ function priorizarPrimeiraLetra() {
     console.log(novoArray)
 }
 
-function priorizarSegundaLetra() {
+function excluirPalavraPelaLetra(p) {
     var auxArray = [];
-    var letraRecebida = document.getElementById("text-2l").value;
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        var primeiraLetra = novoArray[i].charAt(1);
-        if (letraRecebida === primeiraLetra) {
-            auxArray.push(novoArray[i]);
-        }
-    }
-    novoArray = auxArray;
-    console.log(auxArray)
-}
-
-function priorizarTerceiraLetra() {
-    var auxArray = [];
-    var letraRecebida = document.getElementById("text-3l").value;
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        var primeiraLetra = novoArray[i].charAt(2);
-        if (letraRecebida === primeiraLetra) {
-            auxArray.push(novoArray[i]);
-        }
-    }
-    novoArray = auxArray;
-    console.log(auxArray)
-}
-
-function priorizarQuartaLetra() {
-    var auxArray = [];
-    var letraRecebida = document.getElementById("text-4l").value;
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        var primeiraLetra = novoArray[i].charAt(3);
-        if (letraRecebida === primeiraLetra) {
-            auxArray.push(novoArray[i]);
-        }
-    }
-    novoArray = auxArray;
-    console.log(auxArray)
-}
-
-function priorizarQuintaLetra() {
-    var auxArray = [];
-    var letraRecebida = document.getElementById("text-5l").value;
-    for (var i = 0; i < novoArray.length; i = i + 1) {
-        var primeiraLetra = novoArray[i].charAt(4);
-        if (letraRecebida === primeiraLetra) {
-            auxArray.push(novoArray[i]);
-        }
-    }
-    novoArray = auxArray;
-    console.log(auxArray)
-}
-
-function excluirPalavraPelaPrimeiraLetra() {
-    var auxArray = [];
-    var letrasRecebida = document.getElementById("text-6").value
+    var letrasRecebida = document.getElementById("excluir-letra-" + p).value
     console.log(letrasRecebida)
     for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-        for (var j = 0; j < novoArray.length; j = j + 1) {
-            var primeiraLetra = letrasRecebida.charAt(i)
-            if (novoArray[j].charAt() !== primeiraLetra) {
+        for(var j = 0; j < novoArray.length; j = j + 1){
+            var letra = letrasRecebida.charAt(i)
+            if(novoArray[j].charAt(p-1) !== letra){
                 auxArray.push(novoArray[j]);
             }
         }
@@ -1769,90 +1706,3 @@ function excluirPalavraPelaPrimeiraLetra() {
     }
     console.log(novoArray);
 }
-
-function excluirPalavraPelaSegundaLetra() {
-    var auxArray = [];
-    var letrasRecebida = document.getElementById("text-7").value
-    console.log(letrasRecebida)
-    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-        for (var j = 0; j < novoArray.length; j = j + 1) {
-            var segundaLetra = letrasRecebida.charAt(i)
-            if (novoArray[j].charAt(1) !== segundaLetra) {
-                auxArray.push(novoArray[j]);
-            }
-        }
-        novoArray = auxArray;
-        auxArray = [];
-    }
-    console.log(novoArray);
-}
-
-function excluirPalavraPelaTerceiraLetra() {
-    var auxArray = [];
-    var letrasRecebida = document.getElementById("text-8").value
-    console.log(letrasRecebida)
-    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-        for (var j = 0; j < novoArray.length; j = j + 1) {
-            var terceiraLetra = letrasRecebida.charAt(i)
-            if (novoArray[j].charAt(2) !== terceiraLetra) {
-                auxArray.push(novoArray[j]);
-            }
-        }
-        novoArray = auxArray;
-        auxArray = [];
-    }
-    console.log(novoArray);
-}
-
-function excluirPalavraPelaQuartaLetra() {
-    var auxArray = [];
-    var letrasRecebida = document.getElementById("text-9").value // ab
-    console.log(letrasRecebida)
-    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-        for (var j = 0; j < novoArray.length; j = j + 1) {
-            var quartaLetra = letrasRecebida.charAt(i)
-            if (novoArray[j].charAt(3) !== quartaLetra) {
-                auxArray.push(novoArray[j]);
-            }
-        }
-        novoArray = auxArray;
-        auxArray = [];
-    }
-    console.log(novoArray);
-}
-
-function excluirPalavraPelaQuintaLetra() {
-    var auxArray = [];
-    var letrasRecebida = document.getElementById("text-10").value
-    console.log(letrasRecebida)
-    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-        for (var j = 0; j < novoArray.length; j = j + 1) {
-            var quintaLetra = letrasRecebida.charAt(i)
-            if (novoArray[j].charAt(4) !== quintaLetra) {
-                auxArray.push(novoArray[j]);
-            }
-        }
-        novoArray = auxArray;
-        auxArray = [];
-    }
-    console.log(novoArray);
-}
-
-
-
-//function excluirPalavraPelaQuintaLetra(p) {
-//    var auxArray = [];
-//    var letrasRecebida = document.getElementById("text-"+p).value
-//    console.log(letrasRecebida)
-//    for (var i = 0; i < letrasRecebida.length; i = i + 1) {
-//        for(var j = 0; j < novoArray.length; j = j + 1){
-//            var quintaLetra = letrasRecebida.charAt(i)
-//            if(novoArray[j].charAt(4) !== quintaLetra){
-//                auxArray.push(novoArray[j]);
-//            }
-//        }
-//        novoArray = auxArray;
-//        auxArray = [];
-//    }
-//    console.log(novoArray);
-//}
