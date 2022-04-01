@@ -1651,6 +1651,7 @@ function pegarPalavra() {
         novoArray = novoArray.filter(filtrarLetra);
     }
     console.log(novoArray);
+    mostrarSugestao(novoArray);
 }
 
 
@@ -1668,6 +1669,7 @@ function excluirPalavra() {
         novoArray = novoArray.filter(excluirLetra);
     }
     console.log(novoArray);
+    mostrarSugestao(novoArray);
 }
 
 function excluirLetra(palavra) {
@@ -1688,6 +1690,7 @@ function priorizarLetra(p) {
     }
     novoArray = auxArray;
     console.log(novoArray)
+    mostrarSugestao(novoArray);
 }
 
 function excluirPalavraPelaLetra(p) {
@@ -1705,4 +1708,14 @@ function excluirPalavraPelaLetra(p) {
         auxArray = [];
     }
     console.log(novoArray);
+    mostrarSugestao(novoArray);
+}
+
+function mostrarSugestao(data) {
+    if(data.length === 0) {
+        return document.getElementById("sugestao").innerHTML = "Palava nao consta";
+    }
+    var index = Math.floor(((data.length)/2));
+    document.getElementById("sugestao").innerHTML = data[index];
+    console.log(index);
 }
